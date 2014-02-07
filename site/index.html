@@ -1,0 +1,74 @@
+{% extends "/base.html" %}
+{%block main%}
+    <div id="flexcontent">
+        <div id="leftpanel">
+            <div id="controldiv">
+                <div id="control1">
+                    <input class="textinput" id="eventtitle" name="eventtitle" type="text" size=20 placeholder=" event title">
+                    <input class="textinput" id="eventauthor" name="eventauthor" type="text" size=20 placeholder="event author name">
+                    <input id="startdate" type="date" name="startdate" value=''>
+                    <input id="enddate" type="date" name="enddate" value=''>
+                    <span class="closep">Time range:</span> <select id="timeunits" name="timeunits">
+                        <option value="15min">15min</option>
+                        <option value="30min">30min</option>
+                        <option value="1hr">1hr</option>
+                        <option value="2hr">2hr</option>
+                    </select>
+                    <div id="timerange">
+                    start: <select id="starttime" name="starttime">
+                        <option value="7am">7am</option>
+                        <option value="8am">8am</option>
+                        <option value="9am">9am</option>
+                        <option value="10am">10am</option>
+                    </select>
+                    end: <select id="endtime" name="endtime">
+                        <option value="7pm">7pm</option>
+                        <option value="8pm">8pm</option>
+                        <option value="9pm">9pm</option>
+                        <option value="10pm">10pm</option>
+                    </select>
+                    </div>
+                </div>
+                <div id="control2"><div id="importedcal"></div></div>
+                <div id="control3">
+                    <select multiple="multiple" id="calselect" name="calselect">
+                        <option value="cal1">calendar1</option>
+                        <option value="cal2">calendar2</option>
+                        <option value="cal3">calendar3</option>
+                        <option value="cal4">calendar4</option>
+                    </select>
+                </div>
+            </div>
+            <div id="calendardiv">
+                <div id="calendar">
+                </div> 
+            </div>  
+            <div id="resultsdiv">
+                <input type="submit" value="view poll status">
+            </div> 
+        </div>
+        <div id="rightpanel">
+            <input type="text" placeholder="enter list recipients here"> 
+            <input type="button" value="import contacts">
+            <span>send automated email in </span>
+            <select id="emaillag" name="emaillag">
+                        <option value="1 day">1 day</option>
+                        <option value="2 days">2 days</option>
+                        <option value="3 days">3 days</option>
+                        <option value="4 days">4 days</option>
+            </select>
+            <input type="button" value="click to add priority list"><br>
+            <div class="prioritylist">
+                <input type="text" placeholder="enter contacts"> 
+                <div id="slider">
+                    0% <input id="slide" type="range"
+                    min="0" max="10" step="1" value="5"
+                    onchange="updateSlider(this.value)" />100%
+                </div>
+                <div id="chosen">100</div>
+            </div>
+            <input type="button" value="save contact list">
+            <input type="text" placeholder="enter contact list name"> 
+        </div>
+    </div>
+{%endblock%}

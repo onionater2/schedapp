@@ -1,0 +1,194 @@
+//@import "elements.less";
+@import "bootstrap/bootstrap.less";
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Istok+Web:700|Rosario:400,700|Roboto:400,700);
+
+@my-font-family: 'Istok Web', sans-serif;
+@neutlight:#DCDDD8;
+@neutmed:#a7abae;
+@neutdark:#85898d;
+@accentlight:rgb(130, 124, 148);//#551166;//#D74B4B;
+@accentmed:rgb(85, 85, 126);
+@accentdark:rgb(80, 80, 120);
+@darkaccent:#354B5E;
+@darkblack:#17273B;
+
+//sizing
+@minwidth:40em;
+@totalheight:45em;
+@totalwidth:70em;
+@topbarheight:3em;
+@bottombarheight:2em;
+@middleheight: @totalheight - @topbarheight - @bottombarheight;
+
+//boilerplate
+#background{
+    background-color:black;
+    height:100%;
+    width:100%;
+}
+#page{
+    position:relative;
+    max-width:@totalwidth;
+    min-width:@minwidth;
+    height:@totalheight;
+    margin:auto;
+    background-color: red;
+}
+#topbar{
+    position:absolute;
+    background-color:@neutlight;
+    width:100%;
+    height:@topbarheight;
+    top:0em;
+}
+#maincontainer{
+    position:absolute;
+    background-color:brown;
+    width:100%;
+    height:@middleheight;
+    top:@topbarheight;
+}
+#bottombar{
+    position:absolute;
+    background-color:pink;
+    width:100%;
+    height:2em;
+    bottom:0em;
+}
+
+#flexcontent{
+    position:relative;
+    @marginsize:1em;
+    height:@middleheight - @marginsize;
+    margin:@marginsize/2;
+    overflow:hidden;
+    
+    //background-color:yellow;
+}
+#branddiv{
+    position:absolute;
+    left:0em;
+}
+#signin{
+    position:absolute;
+    right:0em;
+}
+#date{
+    position:absolute;
+    left:0em;
+}
+#copyright{
+    position:absolute;
+    right:0em;
+}
+//admin
+#leftpanel{
+    position:absolute;
+    left:0em;
+    background-color:green;
+    height:100%;
+    width:70%;
+}
+#rightpanel{
+    position:absolute;
+    right:0em;
+    background-color:blue;
+    height:100%;
+    width:30%;
+}
+@controlheight:13em;
+#controldiv{
+    position:absolute;
+    height:@controlheight;
+    width:100%;
+    background-color:white;
+}
+#control1{
+    position:absolute;
+    height:100%;
+    width:40%;
+    background-color:blue;
+    padding:.5em;
+}
+#control2{
+    position:absolute;
+    height:100%;
+    width:40%;
+    left:40%;
+    background-color:yellow;
+}
+#control3{
+    position:absolute;
+    height:100%;
+    width:20%;
+    left:80%;
+    background-color:green;
+}
+.controlitem{
+    margin:.1em;
+    width:15em;
+}
+.closep{
+    margin-top:1em;
+    line-height:.3em;
+}
+#eventtitle{
+    .controlitem;
+}
+#eventauthor{
+    .controlitem;
+}
+#startdate{
+    .controlitem;
+}
+#enddate{
+    .controlitem;
+}
+#timerange{
+    .controlitem;
+}
+#starttime{
+}
+#endtime{
+}
+#calselect{
+    position:relative;
+    width:80%;
+    height:85%;
+    margin:10%;
+    margin-top:10%;
+    background-color:pink;
+}
+#importedcal{
+    position:relative;
+    @height:90%;
+    top:(100-@height)/2;
+    height:@height;
+    width:80%;
+    margin:auto;
+    background-color:black;
+}
+#calendardiv{
+    position:absolute;
+    height:23em;
+    width:100%;
+    top:@controlheight;
+    background-color:orange;
+}
+#calendar{
+    position:relative;
+    @height:90%;
+    top:(100-@height)/2;
+    height:@height;
+    width:80%;
+    margin:auto;
+    background-color:black;
+}
+#resultsdiv{
+    position:absolute;
+    bottom:0em;
+    width:100%;
+    height:3em;
+    background-color:red;
+}
+@testcolor:#A9B9D2;
